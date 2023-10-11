@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: pink;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav>h1 {
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+button {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 25px;
+}
+
+main {
+    padding-top: 135px;
+    padding-bottom: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main p {
+    width: 40%;
+}
