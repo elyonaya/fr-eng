@@ -1,50 +1,39 @@
-let lang = "fr";
+let lang = false;
 
-function translateTxt() {
-    if(lang == fr) {
+function frToEng() {
+
+    if(lang){
+        document.getElementById("eng").innerHTML="EN";
         document.getElementById("texte-bjr").innerHTML="Bonjour";
-      } else {
+        lang = false;
+    }else{
+        document.getElementById("eng").innerHTML="FR";
         document.getElementById("texte-bjr").innerHTML="Hello";
-      } 
+        lang = true;
+    }
+    
 }
 
-function translateTxtFr() {
-    lang = fr;
-    translateTxt()
-  }
-  
-function translateTxtEng() {
-    lang = eng;
-    translateTxt()
-  }
+document.getElementById("eng").addEventListener("click", frToEng)
 
-document.getElementById("fr").addEventListener("click", translateTxtFr)
-document.getElementById("eng").addEventListener("click", translateTxtEng)
+let mode = false;
 
+function lightToDark() {
 
-let mode = "light";
-
-function switchMode() {
-    if(mode == light) {
+    if(mode){
         document.getElementById("texte-bjr").style.color = "black";
         document.getElementById("paragraph").style.color = "black";
         document.getElementById("body").style.backgroundColor = "white";
-      } else {
+        document.getElementById("dark").innerHTML="Dark";
+        mode = false;
+    }else{
         document.getElementById("texte-bjr").style.color = "white";
         document.getElementById("paragraph").style.color = "white";
         document.getElementById("body").style.backgroundColor = "black";
-      } 
+        document.getElementById("dark").innerHTML="Light";
+        mode = true;
+    }
+    
 }
 
-function lightMode() {
-    mode = light;
-    switchMode()
-  }
-  
-function darkMode() {
-    mode = dark;
-    switchMode()
-  }
-
-document.getElementById("light").addEventListener("click", lightMode)
-document.getElementById("dark").addEventListener("click", darkMode)
+document.getElementById("dark").addEventListener("click", lightToDark)
